@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/charecterListHomeFragment">
+    <fragment
+        android:id="@+id/charecterListHomeFragment"
+        android:name="com.ersinberkealemdaroglu.rickandmortyapp.view.CharecterListHomeFragment"
+        android:label="CharecterListHomeFragment" >
+        <action
+            android:id="@+id/action_charecterListHomeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ersinberkealemdaroglu.rickandmortyapp.view.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="movieModel"
+            app:argType="com.ersinberkealemdaroglu.rickandmortyapp.model.MovieModel" />
+    </fragment>
+</navigation>
